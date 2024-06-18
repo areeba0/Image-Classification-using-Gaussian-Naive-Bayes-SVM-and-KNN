@@ -1,0 +1,2 @@
+# Image-Classification-using-Gaussian-Naive-Bayes-SVM-and-KNN
+The code uses KNN, Gaussian Naive Bayes &amp; SVM to classify images. It preprocesses, normalizes data, applies PCA , computes accuracy, precision etc. It evaluates k-NN using Euclidean distance &amp; cosine similarity, visualizing results with line plots, 3D scatter plots, &amp; confusion matrices to demonstrate classifier performance.
