@@ -1,8 +1,16 @@
-# Image-Classification-using-Gaussian-Naive-Bayes-SVM-and-KNN
+# Image Classification using Gaussian Naive Bayes SVM and KNN from Scratch 
 ## Overview
 The code implements three popular machine learning classifiers—k-Nearest Neighbors (k-NN), Gaussian Naive Bayes, and Support Vector Machine (SVM)—to classify images based on extracted features. It preprocesses the data, normalizes it, and applies Principal Component Analysis (PCA) for dimensionality reduction. The code includes functions for calculating accuracy, precision, recall, F1 score, and confusion matrix. It evaluates each classifier's performance using both Euclidean distance and cosine similarity for k-NN. Additionally, the code visualizes results through line plots, 3D scatter plots, and confusion matrices, providing a comprehensive overview of each classifier’s effectiveness on the given dataset.
 
 ![Pastel Colorful Illustrative Digital Marketing Infographic (1)](https://github.com/areeba0/Image-Classification-using-Gaussian-Naive-Bayes-SVM-and-KNN/assets/136759791/0df34083-035f-48e9-8f82-ff0525f8b456)
+
+# Dependencies
+- Jupyter notebook
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
 
 # Pipline Explanation =
 ## 1) Data Loading:
@@ -75,7 +83,6 @@ The code implements three popular machine learning classifiers—k-Nearest Neigh
 ## Visualization:
 - Plots sample images with predicted and actual labels.
 - Generates confusion matrices for performance evaluation.
-  
   ![image](https://github.com/areeba0/Image-Classification-using-Gaussian-Naive-Bayes-SVM-and-KNN/assets/136759791/413c4211-b177-4b3a-b822-0c4ec3108f09)
 
 - Visualizes the data in 3D space using PCA.
@@ -86,6 +93,43 @@ The code implements three popular machine learning classifiers—k-Nearest Neigh
  ![image](https://github.com/areeba0/Image-Classification-using-Gaussian-Naive-Bayes-SVM-and-KNN/assets/136759791/89ecac73-07c1-4139-a494-a621b793a2df)
 
  ![image](https://github.com/areeba0/Image-Classification-using-Gaussian-Naive-Bayes-SVM-and-KNN/assets/136759791/33169c70-e311-470d-b3ac-edce200708c9)
+
+# Implementation Overview of Models = 
+
+# k-NN Classifier=
+KNNClassifier Class
+- The KNNClassifier class implements the k-Nearest Neighbors algorithm.
+
+## Methods:
+- __init__(self, k, distance_metric='euclidean'): Initializes the classifier with k neighbors and the specified distance metric (Euclidean or Cosine).
+- fit(self, X_train, y_train): Fits the model to the training data.
+- predict(self, X_test): Predicts the labels for the test data.
+- calculate_distances(self, test_instance): Calculates distances between a test instance and all training instances.
+- evaluate_accuracy(self, y_true, y_pred): Evaluates the accuracy of the predictions.
+- evaluate_precision_recall_f1(self, y_true, y_pred): Evaluates precision, recall, and F1 score.
+- 
+## Data Preprocessing Functions
+- preprocess_data(data): Normalizes the data.
+- split_train_test(data, labels, train_size): Splits the data into training and testing sets.
+  
+# Gaussian Naive Bayes = 
+GaussianNB Class
+- The GaussianNB class implements the Gaussian Naive Bayes algorithm.
+
+## Methods:
+- fit(self, X_train, y_train): Trains the Gaussian Naive Bayes model.
+- predict(self, X_test): Predict labels for the test data based on the Gaussian distribution.
+  
+# Support Vector Machine= 
+SVM Class
+- The SVM class implements a Support Vector Machine using gradient descent optimization.
+
+## Methods:
+- __init__(self, learning_rate=0.001, lambda_param=0.01, n_iters=1000): Initializes the SVM with specified parameters.
+- fit(self, X, y): Trains the SVM on the training data using gradient descent.
+- predict(self, X): Predicts labels for the test data.
+
+
 
 
 
